@@ -7,6 +7,8 @@
 # @File         : create_UserAgent.py
 """
 随机产生一个User-Agent
+
+UA格式:
 User-Agent: Mozilla/<version> (<system-information>) <platform> (<platform-details>) <extensions>
 """
 
@@ -36,7 +38,7 @@ chrome_list = ['91.0.4472.77',
 def random_UserAgent(edge=False):  # 随机产生一个U-A 输出
     """
 
-    :param edge: True:伪装成edge浏览器 False:伪装成chrome浏览器
+    :param edge: 默认:False True:伪装成edge浏览器 False:伪装成chrome浏览器
     :return: header: 请求头字典
     """
     system_information = choice(system_information_list)
