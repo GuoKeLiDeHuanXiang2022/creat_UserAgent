@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+# @Author       : GuoKeLiDeHuanXiang2022
+# @Edition      : python3.10
+# @Software     : PyCharm
+# @Time         : 2022/8/4 17:58
+# @File         : create_UserAgent.py
 """
 随机产生一个User-Agent
 User-Agent: Mozilla/<version> (<system-information>) <platform> (<platform-details>) <extensions>
@@ -35,24 +42,23 @@ def random_UserAgent(edge=False):  # 随机产生一个U-A 输出
     system_information = choice(system_information_list)
     chrome = choice(chrome_list)
     if not edge:  # 不需要edge标  默认无edge标
-        edg = ''
         user_agent = 'Mozilla/5.0 ' \
                      f'{system_information} ' \
                      'AppleWebKit/537.36 ' \
                      '(KHTML, like Gecko) ' \
                      f'Chrome/{chrome} ' \
-                     'Safari/537.36' \
-                     f'{edg}'
+                     'Safari/537.36'
     else:  # 需要edge标
         edg_list = [' Edg/91.0.864.41',
-                    'Edg/103.0.1264.49']
+                    'Edg/103.0.1264.49',
+                    'Edg/104.0.1293.47']
         edg = choice(edg_list)
         user_agent = 'Mozilla/5.0 ' \
                      f'{system_information} ' \
                      'AppleWebKit/537.36 ' \
                      '(KHTML, like Gecko) ' \
                      f'Chrome/{chrome} ' \
-                     'Safari/537.36' \
+                     'Safari/537.36 ' \
                      f'{edg}'
     header = {
         'User-Agent': f'{user_agent}'
