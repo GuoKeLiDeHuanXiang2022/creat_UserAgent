@@ -16,11 +16,22 @@ from random import choice
 
 # 系统版本
 system_information_list = ['(Windows NT 10.0; Win64; x64)',
-                           '(Windows NT 6.1; Win64; x64)',
-                           '(Windows NT 6.3; Win64; x64)']
+                           '(Windows NT 6.3; Win64; x64)',
+                           '(Windows NT 6.2; Win64; x64)',
+                           '(Windows NT 6.1; Win64; x64)']
 
 # 浏览器内核版本
-chrome_list = ['91.0.4472.77',
+chrome_list = ['96.0.4664.93',
+               '96.0.4664.45',
+               '95.0.4638.69',
+               '95.0.4638.54',
+               '94.0.4606.81',
+               '94.0.4606.71',
+               '94.0.4606.61',
+               '94.0.4606.54',
+               '93.0.4577.82',
+               '93.0.4577.63',
+               '91.0.4472.77',
                '88.0.4324.11',
                '87.0.4280.63',
                '87.0.4280.60',
@@ -33,6 +44,10 @@ chrome_list = ['91.0.4472.77',
                '85.0.4183.121',
                '85.0.4183.83',
                '84.0.4147.135']
+
+edg_list = ['Edg/91.0.864.41',
+            'Edg/103.0.1264.49',
+            'Edg/104.0.1293.47']
 
 
 def random_UserAgent(edge=False):  # 随机产生一个U-A 输出
@@ -51,9 +66,6 @@ def random_UserAgent(edge=False):  # 随机产生一个U-A 输出
                      f'Chrome/{chrome} ' \
                      'Safari/537.36'
     else:  # 需要edge标
-        edg_list = [' Edg/91.0.864.41',
-                    'Edg/103.0.1264.49',
-                    'Edg/104.0.1293.47']
         edg = choice(edg_list)
         user_agent = 'Mozilla/5.0 ' \
                      f'{system_information} ' \
