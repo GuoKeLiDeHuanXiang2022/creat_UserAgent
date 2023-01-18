@@ -3,7 +3,7 @@
 
 ## 导入
 
-    from create_UserAgent import random_UserAgent
+    from fake_UserAgent import random_UserAgent
 
 ## 使用方法
 ### 伪装成chrome浏览器
